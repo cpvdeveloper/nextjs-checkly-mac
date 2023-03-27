@@ -1,36 +1,13 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from './page.module.css'
+/* eslint-disable @next/next/no-img-element */
+import Image from "next/image";
+import { Inter } from "next/font/google";
+import styles from "./page.module.css";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
       <div className={styles.center}>
         <Image
           className={styles.logo}
@@ -42,50 +19,28 @@ export default function Home() {
         />
         <div className={styles.thirteen}>
           <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
+          <div className={inter.className}>X</div>
+          <Image
+            src="https://app.checklyhq.com/static/images/racoon_logo.svg"
+            alt="Checkly Logo"
+            width={40}
+            height={40}
+            priority
+          />
         </div>
       </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div className={styles.statuses}>
+        <img
+          alt="Checkly Homepage Status Check"
+          // This URL can be found in the Checkly Dashboard under "Create Status Badge" on the Homepage browser check
+          src="https://api.checklyhq.com/v1/badges/checks/52f6180f-2631-40c8-9cf6-113382609f22?style=for-the-badge&theme=default"
+        />
+        <img
+          alt="Checkly API Check Status"
+          // This URL can be found in the Checkly Dashboard under "Create Status Badge" on the Hello API check
+          src="https://api.checklyhq.com/v1/badges/checks/955a97c3-9f10-4ce6-9836-9011e9e0f9ee?style=for-the-badge&theme=default&responseTime=true"
+        />
       </div>
     </main>
-  )
+  );
 }
