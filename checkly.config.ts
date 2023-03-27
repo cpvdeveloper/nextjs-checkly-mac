@@ -1,9 +1,9 @@
 import { defineConfig } from "@checkly/cli";
 
 const config = defineConfig({
-  projectName: "Boilerplate Project",
-  logicalId: "boilerplate-project",
-  repoUrl: "https://github.com/checkly/checkly-cli",
+  projectName: "Example Project for Checkly CLI with Next.js 13",
+  logicalId: "checkly-cli-next-13",
+  repoUrl: "https://github.com/cpvdeveloper/nextjs-checkly-mac/",
   checks: {
     locations: ["us-east-1", "eu-west-1"],
     tags: ["mac"],
