@@ -9,6 +9,6 @@ const sendDefaults = {
 };
 
 export const emailChannel = new EmailAlertChannel("email-channel", {
-  address: "your-email@gmail.com",
+  address: "your-email@gmail.com",  // your email here
   ...sendDefaults,
 });

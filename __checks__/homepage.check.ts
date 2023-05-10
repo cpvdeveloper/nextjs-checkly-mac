@@ -3,7 +3,7 @@ import { BrowserCheck } from "@checkly/cli/constructs";
 import { emailChannel } from "./alert-channels";
 
 /*
- * Rather than create an automatic check for `home.spec.js`, we explicitly define a check here.
+ * Rather than create an automatic check for `homepage.spec.js`, we explicitly define a check here.
  * This allows us to override the check configuration.
  */
 new BrowserCheck("home-check-1", {
